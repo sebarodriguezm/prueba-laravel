@@ -40,7 +40,7 @@ class TextoController extends Controller
         $texto->save();
         return response()->json([
             'res' => true,
-            'msg' => 'texto registrador' 
+            'msg' => 'texto agregado con éxito' 
         ]);
     }
 
