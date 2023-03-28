@@ -39,10 +39,12 @@ class TextoController extends Controller
         $texto = new Texto;
         $texto->texto = $request->texto;
         $texto->save();
-        return response()->json([
-            'res' => true,
-            'msg' => 'texto agregado con éxito' 
-        ]);
+        $data = [
+            'message' => 'Texto subido con exito',
+            'texto' => $texto
+        ];
+
+        return response()->json($data);
     }
 
     /**
