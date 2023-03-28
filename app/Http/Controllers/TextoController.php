@@ -14,7 +14,8 @@ class TextoController extends Controller
      */
     public function index()
     {
-        return Texto::all();
+        $textos = Texto::all();
+        return response()->json($textos);
     }
 
     /**
