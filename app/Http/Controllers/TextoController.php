@@ -78,7 +78,14 @@ class TextoController extends Controller
      */
     public function update(Request $request, Texto $texto)
     {
-        //
+        $texto->texto = $request->texto;
+        $texto->save();
+
+        $data = [
+            'message' => 'Texto editado con exito',
+            'detalles' => $texto
+        ];
+        return response()->json($data);
     }
 
     /**
@@ -89,6 +96,11 @@ class TextoController extends Controller
      */
     public function destroy(Texto $texto)
     {
-        //
+        $texto->delete();
+        $data = [
+            'message' => 'Texto eliminado con exito',
+            'detalles' => $texto
+        ];
+        return response()->json($data);
     }
 }

@@ -24,3 +24,4 @@ Route::get('tipo', [TipoController::class,'index']);
 Route::get('rubro', [RubroController::class,'index']);
 Route::post('logo',[LogoController::class, 'create']);
 Route::apiResource('texto',TextoController::class);
+Route::put('/textos/{texto}', 'app\Http\Controllers\TextoController@update');
