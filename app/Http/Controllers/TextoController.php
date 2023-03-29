@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\TextoRequest;
 use App\Models\Texto;
 use Illuminate\Http\Request;
 
@@ -34,7 +35,7 @@ class TextoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(TextoRequest $request)
     {
         $texto = new Texto;
         $texto->texto = $request->texto;
