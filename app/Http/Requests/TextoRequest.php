@@ -24,7 +24,7 @@ class TextoRequest extends FormRequest
     public function rules()
     {
         return [
-            'texto' => 'required|string|min:2',
+            'nombre' => 'required|string|min:2',
         ];
     }
 }
