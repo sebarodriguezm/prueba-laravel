@@ -35,7 +35,7 @@ class TextoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(TextoRequest $request)
+    public function store(Request $request)
     {
         $texto = new Texto;
         $texto->texto = $request->texto;
